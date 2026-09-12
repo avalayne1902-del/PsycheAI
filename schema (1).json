@@ -1,0 +1,118 @@
+{
+  "user": {
+    "user_id": "string",
+    "created_at": "date",
+    "language": "string"
+  },
+  "conversation": {
+    "conversation_id": "string",
+    "user_id": "string",
+    "created_at": "date",
+    "topic": "string",
+    "status": "active | closed"
+  },
+  "reflection": {
+    "reflection_id": "string",
+    "conversation_id": "string",
+    "situation": "string",
+    "perception": "string",
+    "thoughts": ["string"],
+    "emotions": ["string"],
+    "body_reactions": ["string"],
+    "behavior": "string",
+    "consequences": "string",
+    "possible_patterns": ["string"],
+    "alternative_explanations": ["string"],
+    "user_confirmation": "string",
+    "strategy": "string",
+    "result": "string"
+  },
+  "pattern": {
+    "pattern_id": "string",
+    "user_id": "string",
+    "title": "string",
+    "description": "string",
+    "triggers": ["string"],
+    "thoughts": ["string"],
+    "emotions": ["string"],
+    "behaviors": ["string"],
+    "short_term_function": "string",
+    "possible_long_term_cost": "string",
+    "confidence": "number (0-1)",
+    "evidence_count": "integer",
+    "status": "hypothesis | confirmed | partially_confirmed | rejected"
+  },
+  "strategy": {
+    "strategy_id": "string",
+    "user_id": "string",
+    "pattern_id": "string",
+    "title": "string",
+    "description": "string",
+    "steps": ["string"],
+    "duration_days": "integer",
+    "status": "recommended | active | completed",
+    "result": "string | null",
+    "user_rating": "number | null"
+  },
+  "profile": {
+    "user_id": "string",
+    "thinking_patterns": ["string"],
+    "emotional_patterns": ["string"],
+    "behavior_patterns": ["string"],
+    "relationship_patterns": ["string"],
+    "triggers": ["string"],
+    "strengths": ["string"],
+    "goals": ["string"],
+    "active_experiments": ["string"],
+    "development": ["string"]
+  },
+  "feedback": {
+    "feedback_id": "string",
+    "user_id": "string",
+    "reflection_id": "string",
+    "date": "date",
+    "helped": "boolean",
+    "rating": "integer (1-5)",
+    "what_helped": "string",
+    "what_was_wrong": "string",
+    "what_was_missing": "string",
+    "feature_request": "string",
+    "comment": "string"
+  },
+  "opportunity": {
+    "id": "string",
+    "date": "date",
+    "opportunity": "string",
+    "type": "string",
+    "source": "string",
+    "problem": "string",
+    "target_group": "string",
+    "solution_idea": "string",
+    "potential": "number",
+    "effort": "number",
+    "urgency": "number",
+    "score": "number",
+    "status": "string",
+    "reasoning": "string",
+    "next_step": "string"
+  },
+  "ai_output": {
+    "response": "string",
+    "analysis": {
+      "situation": "string",
+      "thoughts": ["string"],
+      "emotions": ["string"],
+      "behavior": "string",
+      "consequences": "string"
+    },
+    "hypotheses": ["string"],
+    "alternative_explanations": ["string"],
+    "questions": ["string"],
+    "strategy": "object | null",
+    "memory_candidates": ["string"],
+    "safety": {
+      "risk_detected": "boolean",
+      "risk_level": "none | low | medium | high"
+    }
+  }
+}
