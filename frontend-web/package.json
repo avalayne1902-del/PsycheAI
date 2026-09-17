@@ -1,0 +1,17 @@
+{
+  "name": "psycheai-web",
+  "version": "1.0.0",
+  "description": "PsycheAI Chat Frontend - Mobile-first Dark UI",
+  "type": "module",
+  "main": "index.tsx",
+  "scripts": {
+    "dev": "bun run index.tsx",
+    "start": "bun run index.tsx",
+    "build": "bun build index.tsx"
+  },
+  "dependencies": {
+    "hono": "^4",
+    "hono/css": "^4"
+  }
+}
+
